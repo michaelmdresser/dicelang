@@ -58,6 +58,13 @@ mod tests {
         let (result, _) = expr.eval();
         println!("{result}");
     }
+
+    #[test]
+    fn test_eval_whitespace() {
+        let expr = parse(" -d40 + 2d4+ 1 -3-1d6+3d1  ").unwrap();
+        let (result, _) = expr.eval();
+        println!("{result}");
+    }
 }
 
 #[derive(Debug, PartialEq, Clone)]
@@ -147,6 +154,8 @@ impl Scanner {
     //     self.next += 1;
     //     return true;
     // }
+
+    // TODO this does an unncessary amount of copying
     fn add_token(&mut self, kind: TokenKind) {
         let source = self.source.clone();
         let mut token_str = String::from("");
@@ -176,6 +185,7 @@ impl Scanner {
             '+' => self.add_token(TokenKind::Plus),
             '-' => self.add_token(TokenKind::Minus),
             'd' => self.add_token(TokenKind::D),
+            ' ' | '\t' | '\n' => (),
             _ => self.number(),
         }
     }
