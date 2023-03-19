@@ -1,6 +1,6 @@
 # WASM dicelang
 
-This is the WASM version of dicelang so dice can be evaluated in browser.
+WASM-ready version of dicelang for browser usage.
 
 ## Build
 ``` sh
@@ -15,16 +15,11 @@ server. Then use a snippet like this to load and use:
 ```html
 <script type="module">
 import init, { roll } from './dicelang/dicelang_wasm.js';
-
 async function run() {
   await init();
-  function onclick() {
-    let inputValue = document.getElementById("inputField").value;
-    let {result, rolls} = roll(inputValue);
-    console.log("result:", result);
-    console.log("rolls:", rolls);
-  }
-  document.getElementById("rollButton").onclick = onclick;
+  let {result, rolls} = roll("d20+1d4-1d6+3");
+  console.log("result:", result);
+  console.log("rolls:", rolls);
 }
 run();
 </script>
