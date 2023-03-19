@@ -2,10 +2,14 @@
 
 Rust crate capable of parsing and evaluating dice expressions like
 `d20+1d4-1d6+3`. The main crate (here) provides parsing and evaluation
-facilities. There are also sub-crates for CLI and WASM support. See their
+facilities. There are also sub-crates for [CLI](./dicelang-cli) and [WebAssembly (WASM)](./dicelang-wasm) support. See their
 READMEs for more more information.
+
+A live WASM demo can be found on my [website](https://michaeldresser.io/).
 
 ![](media/cli-shot.png)
 
-Evaluation returns the overall result as well as each individual roll. This can
-be helpful when looking for critical successes or failures.
+
+## Acknowledgements
+
+Many thanks to Robert Nystrom's book _Crafting Interpreters_ for providing the foundation for this small project.
