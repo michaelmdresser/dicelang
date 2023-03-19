@@ -1,4 +1,4 @@
-# dicelang: dice expression parser and evaluator
+# dicelang: dice expression parser and evaluator in Rust
 
 Rust crate capable of parsing and evaluating dice expressions like
 `d20+1d4-1d6+3`. The main crate (here) provides parsing and evaluation
