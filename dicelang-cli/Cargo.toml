@@ -1,0 +1,9 @@
+[package]
+name = "dicelang-cli"
+authors = ["Michael Dresser <michaelmdresser@gmail.com>"]
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+dicelang = { path = ".." }
+colored = "2"
