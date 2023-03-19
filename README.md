@@ -5,5 +5,7 @@ Rust crate capable of parsing and evaluating dice expressions like
 facilities. There are also sub-crates for CLI and WASM support. See their
 READMEs for more more information.
 
+![](media/cli-shot.png)
+
 Evaluation returns the overall result as well as each individual roll. This can
 be helpful when looking for critical successes or failures.
