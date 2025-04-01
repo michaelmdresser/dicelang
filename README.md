@@ -12,4 +12,4 @@ A live WASM demo can be found on my [website](https://michaeldresser.io/).
 
 ## Acknowledgements
 
-Many thanks to Robert Nystrom's book _Crafting Interpreters_ for providing the foundation for this small project.
+Thanks to Robert Nystrom's book _Crafting Interpreters_ for providing the foundation for this small project.
